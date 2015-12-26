@@ -12,5 +12,11 @@ time node generate.js
 echo "\nKilling static file server\n"
 kill $!
 
-echo "Running merge-pdfs.sh...\n"
-node merge-pdfs.js
+
+#echo "Running merge-pdfs.sh...\n"
+#node merge-pdfs.js
+
+cd output
+cd pdf
+
+pdftk *.pdf cat output diary.pdf
