@@ -9,7 +9,7 @@ echo "Starting static file server...\n"
 echo "Running generate.sh...\n\n"
 time node generate.js
 
-echo "\nKilling static file server\n"
+echo "\nKilling static file server...\n"
 kill $!
 
 #echo "Running merge-pdfs.sh...\n"
@@ -23,7 +23,7 @@ pdftk *.pdf cat output diary.pdf
 echo "Diary.pdf created in /output/pdf\n"
 
 mv Diary.pdf ../
-echo "Diary.pdf moved to the output directory\n"
+echo "Diary.pdf moved to the output directory...\n"
 
 cd -
 mkdir -p html
