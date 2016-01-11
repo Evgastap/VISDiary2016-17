@@ -12,18 +12,45 @@ Handlebars.registerHelper('times', function(n, block) {
     return res;
 });
 
-console.log(chalk.green("Hello, you there."));
-console.log(chalk.green("Let's make a diary! \n"));
+console.log(chalk.green("Hello, you there"), chalk.magenta(":)"));
+console.log(chalk.cyan("Let's make a diary! \n"));
 
 var weeks = require("./weeks.json");
 var results = [];
 
-console.log("I will be generating", weeks.length*2 , "pages\n");
+console.log("I will be generating", weeks.length, "pages\n");
 
 var days = Handlebars.compile(fs.readFileSync("./templates/days.hbs").toString());
 var notes = Handlebars.compile(fs.readFileSync("./templates/notes.hbs").toString());
 
 weeks.forEach(function(week) {
+  var weekDays = week.days.map(function(day) {
+    if (Array.isArray(day.info)) {
+      console.log(day.info.length);
+      return {
+        multilineInfo: true,
+        name: day.name,
+        noninfoLines: 9 - day.info.length,
+        firstInfo: day.info[0],
+        info: day.info.slice(1, day.info.length)
+      };
+    }
+    else {
+      var colouredBackground = false;
+
+      if (day.info === "School Holiday") {
+        colouredBackground = true;
+      }
+
+      return {
+        multilineInfo: false,
+        name: day.name,
+        noninfoLines: 9,
+        colouredBackground: colouredBackground,
+        firstInfo: day.info
+      };
+    }
+  });
   var quotes = week.quotes.map(function(quote) {
     if (Array.isArray(quote.text)) {
       return {
@@ -53,7 +80,7 @@ results.forEach(function(result) {
   outputs.push(result.notes);
 })
 
-console.log("\nLoaded CSS files:");
+console.log("Loaded CSS files:");
 
 fs.readdirSync("./css").forEach(function(file) {
   console.log(file);
@@ -68,9 +95,6 @@ outputs.forEach(function(result, i) {
 });
 
 console.log("Rendering PDFs with PhantomJS...");
-
-  }
-}, 100);
 
 for (var i = 0; i < outputs.length; i++) {
   exec("phantomjs makepdfs.js " + i, function(err, stdout, stderr) {
