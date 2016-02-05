@@ -25,7 +25,8 @@ echo "Diary.pdf created in /output/pdf\n"
 mv Diary.pdf ../
 echo "Diary.pdf moved to the output directory...\n"
 
-cd -
-mkdir -p html
-mv *.html html
+
+#cd -
+#mkdir -p html
+#mv *.html html
 exit

@@ -11,11 +11,12 @@
       <div class="week">
         {{#each days}}
           <div class="day">
+            <div class="lines"></div>
             <div class="name">{{name}}</div>
             <div class="info">{{info}}</div>
 
-            {{#times 9}}
-              <div class="line"></div>
+            {{#times 8}}
+              <div class="line">☐</div>
             {{/times}}
           </div>
         {{/each}}
