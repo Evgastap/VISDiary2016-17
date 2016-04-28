@@ -14,7 +14,7 @@
     "days": [
       {
         "name": "Monday 22 August",
-        "info": "School Holiday"
+        "info": "School Holiday/New Students Orientation Morning/Grade 6 Transition"
       },
       {
         "name": "Tuesday 23 August",
@@ -48,15 +48,15 @@
     ],
     "days": [
       {
-        "name": "Monday 29 September",
+        "name": "Monday 29 August",
         "info": null
       },
       {
-        "name": "Tuesday 30 September",
+        "name": "Tuesday 30 August",
         "info": null
       },
       {
-        "name": "Wednesday 31 September",
+        "name": "Wednesday 31 August",
         "info": null
       },
       {
@@ -144,7 +144,7 @@
     "quotes": [
       {
         "text": "They dont want you to win. So what to we do? WIN WIN WIN no matter WHAT",
-        "author": "Dj khaled"
+        "author": "Dj Khaled"
       },
       {
         "text": "I am always late on principle, my principle being that punctuality is the thief of time.",
@@ -287,7 +287,7 @@
         "author": "Albert Einstein"
       },
       {
-        "text": "Why worry?  if you've done the best you can, worrying won't make it any better.",
+        "text": "Why worry?  If you've done the best you can, worrying won't make it any better.",
         "author": "Walt Disney"
       }
     ],
@@ -337,7 +337,7 @@
       },
       {
         "name": "Wednesday 26 October",
-        "info": null
+        "info": "Public Holiday"
       },
       {
         "name": "Thursday 27 October",
@@ -520,7 +520,7 @@
       },
       {
         "name": "Friday 9 December",
-        "info": "School Holiday"
+        "info": "School Holiday/Staff Professional Development Day"
       }
     ]
   },
@@ -577,19 +577,19 @@
         "info": null
       },
       {
-        "name": "Tuesday 20 January",
+        "name": "Tuesday 20 December",
         "info": null
       },
       {
-        "name": "Wednesday 21 January",
+        "name": "Wednesday 21 December",
         "info": ["", "Winter break begins 22 December - 8 January"]
       },
       {
-        "name": "Thursday 22 January",
-        "info": null
+        "name": "Thursday 22 December",
+        "info": "School Closed"
       },
       {
-        "name": "Friday 9 January",
+        "name": "Friday 23 December",
         "info": "School Holiday"
       }
     ]
@@ -1242,11 +1242,11 @@
         "info": null
       },
       {
-        "name": "Tuesday 30 June",
+        "name": "Tuesday 30 May",
         "info": "MYP Action 2nd semester deadline"
       },
       {
-        "name": "Wednesday 31 June",
+        "name": "Wednesday 31 May",
         "info": null
       },
       {
